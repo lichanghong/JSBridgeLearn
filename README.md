@@ -3,7 +3,9 @@
 学习如何使用WebViewJavascriptBridge，配有详细的使用教程
 
 WKWebView before iOS 11.0 (NSCoding support was broken in previous versions) [6]
+
 deployment version > 11 才行，否则就用代码创建吧
+更多iOS相关教程在合伙呀，www.hehuoya.com
 
 [![CI Status](https://img.shields.io/travis/1211054926@qq.com/JSBridgeLearn.svg?style=flat)](https://travis-ci.org/1211054926@qq.com/JSBridgeLearn)
 [![Version](https://img.shields.io/cocoapods/v/JSBridgeLearn.svg?style=flat)](https://cocoapods.org/pods/JSBridgeLearn)

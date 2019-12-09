@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="whP-gf-Uak">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="whP-gf-Uak">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,12 +18,76 @@
                     <view key="view" contentMode="scaleToFill" id="TpU-gO-2f1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="siS-CB-PPZ">
+                                <rect key="frame" x="37" y="522" width="92" height="30"/>
+                                <state key="normal" title="获取用户信息"/>
+                                <connections>
+                                    <action selector="getUserinfo" destination="whP-gf-Uak" eventType="touchUpInside" id="mhV-HH-zqF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jgh-YV-c3f">
+                                <rect key="frame" x="179" y="522" width="31" height="30"/>
+                                <state key="normal" title="弹窗"/>
+                                <connections>
+                                    <action selector="showInfo" destination="whP-gf-Uak" eventType="touchUpInside" id="pg0-y0-e1X"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4zh-kV-AuX">
+                                <rect key="frame" x="157" y="560" width="62" height="30"/>
+                                <state key="normal" title="刷新界面"/>
+                                <connections>
+                                    <action selector="reloadWebPage" destination="whP-gf-Uak" eventType="touchUpInside" id="DFc-bS-Dlc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yMW-lm-vHy">
+                                <rect key="frame" x="37" y="560" width="62" height="30"/>
+                                <state key="normal" title="插入图片"/>
+                                <connections>
+                                    <action selector="insertImgToWebPage" destination="whP-gf-Uak" eventType="touchUpInside" id="mCc-eJ-oy4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B68-eF-eO6">
+                                <rect key="frame" x="37" y="598" width="62" height="30"/>
+                                <state key="normal" title="界面跳转"/>
+                                <connections>
+                                    <action selector="pushToNewWebSite" destination="whP-gf-Uak" eventType="touchUpInside" id="whp-d5-APk"/>
+                                </connections>
+                            </button>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5vX-Uf-2ob">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="500"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="B68-eF-eO6" firstAttribute="top" secondItem="yMW-lm-vHy" secondAttribute="bottom" constant="8" id="3aB-fQ-5oO"/>
+                            <constraint firstItem="B68-eF-eO6" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leadingMargin" constant="21" id="6oj-KQ-0XE"/>
+                            <constraint firstItem="Mvr-aV-6Um" firstAttribute="top" secondItem="B68-eF-eO6" secondAttribute="bottom" constant="39" id="Ghq-Iz-5sV"/>
+                            <constraint firstItem="Jgh-YV-c3f" firstAttribute="top" secondItem="5vX-Uf-2ob" secondAttribute="bottom" constant="22" id="H19-0w-2Ym"/>
+                            <constraint firstItem="yMW-lm-vHy" firstAttribute="top" secondItem="siS-CB-PPZ" secondAttribute="bottom" constant="8" id="HsV-KN-WDJ"/>
+                            <constraint firstItem="siS-CB-PPZ" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leadingMargin" constant="21" id="NZl-HC-5yj"/>
+                            <constraint firstItem="Jgh-YV-c3f" firstAttribute="leading" secondItem="siS-CB-PPZ" secondAttribute="trailing" constant="50" id="OdN-Rz-KEe"/>
+                            <constraint firstAttribute="trailing" secondItem="5vX-Uf-2ob" secondAttribute="trailing" id="Paq-iL-aqH"/>
+                            <constraint firstItem="yMW-lm-vHy" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leadingMargin" constant="21" id="bKR-DU-pMf"/>
+                            <constraint firstItem="4zh-kV-AuX" firstAttribute="leading" secondItem="yMW-lm-vHy" secondAttribute="trailing" constant="58" id="dSl-bZ-0P0"/>
+                            <constraint firstItem="4zh-kV-AuX" firstAttribute="top" secondItem="Jgh-YV-c3f" secondAttribute="bottom" constant="8" id="fX9-py-LKA"/>
+                            <constraint firstItem="5vX-Uf-2ob" firstAttribute="top" secondItem="uEw-UM-LJ8" secondAttribute="bottom" id="gCG-CT-iP0"/>
+                            <constraint firstItem="Mvr-aV-6Um" firstAttribute="top" secondItem="4zh-kV-AuX" secondAttribute="bottom" constant="77" id="nud-as-zTt"/>
+                            <constraint firstItem="5vX-Uf-2ob" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leading" id="yUg-oX-Hmv"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="webView" destination="5vX-Uf-2ob" id="EyP-kx-jz7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tc2-Qw-aMS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="305" y="433"/>
+            <point key="canvasLocation" x="304.80000000000001" y="432.23388305847078"/>
         </scene>
     </scenes>
 </document>

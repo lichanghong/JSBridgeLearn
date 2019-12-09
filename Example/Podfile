@@ -5,9 +5,6 @@ platform :ios, '8.0'
 target 'JSBridgeLearn_Example' do
   pod 'JSBridgeLearn', :path => '../'
 
-  target 'JSBridgeLearn_Tests' do
-    inherit! :search_paths
+  pod 'WebViewJavascriptBridge', '~> 6.0'
 
-    
-  end
 end

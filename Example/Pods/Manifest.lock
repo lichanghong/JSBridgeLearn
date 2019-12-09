@@ -1,0 +1,23 @@
+PODS:
+  - JSBridgeLearn (0.1.0)
+  - WebViewJavascriptBridge (6.0.3)
+
+DEPENDENCIES:
+  - JSBridgeLearn (from `../`)
+  - WebViewJavascriptBridge (~> 6.0)
+
+SPEC REPOS:
+  trunk:
+    - WebViewJavascriptBridge
+
+EXTERNAL SOURCES:
+  JSBridgeLearn:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  JSBridgeLearn: 2625712fdc13edaecba6f8b1b6a570efcad93e8d
+  WebViewJavascriptBridge: 7f5bc4d3581e672e8f32bd0f812d54bc69bb8e29
+
+PODFILE CHECKSUM: 0d2114c6ab624d26ae50fa67fb8b52fb259840f2
+
+COCOAPODS: 1.8.4

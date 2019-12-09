@@ -1,0 +1,6 @@
+framework module JSBridgeLearn {
+  umbrella header "JSBridgeLearn-umbrella.h"
+
+  export *
+  module * { export * }
+}
